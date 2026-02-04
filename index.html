@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -27,110 +27,274 @@
 <style>
 
 /*======================================
-//--//-->   ABOUT
+//--//-->   MODERN 2026 DESIGN
 ======================================*/
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0a0a0a;
+  color: #ddd;
+}
 
 .about-mf .box-shadow-full {
   padding-top: 4rem;
   padding-bottom: 4rem;
-}
-
-.about-mf .about-img {
-  margin-bottom: 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 40px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
 .about-mf .about-img img {
-  margin-left: 10px;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+  transition: all 0.4s ease;
+  filter: grayscale(20%);
 }
 
+.about-mf .about-img img:hover {
+  transform: scale(1.03) translateY(-5px);
+  filter: grayscale(0%);
+}
 
 .skill-mf .progress {
-  /* background-color: #cde1f8; */
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
+  margin: .8rem 0 1.6rem 0;
+  border-radius: 30px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  overflow: visible;
 }
 
 .skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #ffbd39;
-}
-
-
-/* Animation styles */
-#typing-animation {
+  height: 10px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #ffbd39, #ff8c00);
   position: relative;
-  font-size: 30px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 3s steps(20, end) infinite;
+  transition: width 1.8s cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
 
-#typing-animation:before {
-  content: "";
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: #ccc;
-  animation: typing-cursor 0.5s ease-in-out infinite;
+.skill-mf span {
+  font-weight: 500;
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+/* Typing animation enhancement */
+#typing-animation {
+  font-size: 34px;
+  font-weight: 800;
+  color: #ffbd39;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 20px rgba(255, 189, 57, 0.3);
 }
 
-@keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
+.hero {
+  background: radial-gradient(circle at top right, #1a1a1a, #0a0a0a);
 }
 
+.resume-wrap {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 35px;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 
-/* project image zoom effect */
+.resume-wrap:hover {
+  background: rgba(255, 255, 255, 0.04);
+  transform: translateY(-10px);
+  border-color: rgba(255, 189, 57, 0.3);
+}
 
 .zoom-effect {
   overflow: hidden;
-  transition: transform 0.3s ease-out;
+  border-radius: 25px;
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .zoom-effect:hover {
-  transform: scale(1.1);
+  transform: scale(1.04);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
+.btn-primary {
+  border-radius: 50px;
+  padding: 15px 35px !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  box-shadow: 0 12px 24px rgba(255, 189, 57, 0.25);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(255, 189, 57, 0.4);
+}
+
+.btn-white.btn-outline-white {
+  border-radius: 50px;
+  padding: 15px 35px !important;
+  font-weight: 700;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.blog-entry {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 25px;
+  overflow: hidden;
+  padding: 15px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.blog-entry:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 189, 57, 0.2);
+  transform: translateY(-5px);
+}
+
+.hero .img {
+  border-radius: 40px;
+  margin: 20px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.5s ease;
+}
+
+.hero-img {
+  background-image: url('images/Gemini_Generated_Image_yv38qbyv38qbyv38 (1).png');
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  margin-top: 50px;
+}
+
+@media (max-width: 767.98px) {
+  .hero-img {
+    background-image: url('images/mobile.png') !important;
+    height: 450px !important;
+    margin-top: 10px !important;
+  }
+}
+
+.hero .img:hover {
+  transform: scale(1.02);
+  border-color: rgba(255, 189, 57, 0.3);
+}
+
+.underline {
+  height: 4px;
+  width: 60px;
+  background: #ffbd39;
+  border-radius: 2px;
+}
+
+/* Project Hover Effect */
+.project-hover {
+  transition: all 0.5s ease-in-out !important;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: block;
+}
+
+.project-hover:hover {
+  background-image: var(--hover-img) !important;
+  transform: scale(1.05);
+}
+
+.project-name {
+  color: #ffbd39;
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Scroll Progress Bar */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(90deg, #ffbd39, #ff8c00);
+  z-index: 9999;
+  transition: width 0.1s ease;
+}
+
+/* Navigation Blur Effect */
+.ftco_navbar.scrolled.awake {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Modern Card Hover */
+.blog-entry {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.blog-entry:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(255, 189, 57, 0.15);
+}
+
+/* Float Animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Mobile responsive padding for about section */
+@media (max-width: 767.98px) {
+  .ftco-about .img-about .overlay {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .skill-mf {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 
 </style>
 
 
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <div id="scroll-progress"></div>
 	  
 	  
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">SWALIH</a>
+	      <a class="navbar-brand" href="index.html" target="_blank">SWALIH</a>
 	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	          <li class="nav-item"><a href="#home-section" target="_blank" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" target="_blank" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" target="_blank" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" target="_blank" class="nav-link"><span>Works</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" target="_blank" class="nav-link"><span>Contact</span></a></li>
 	        </ul>
 	      </div>
 	    </div>
@@ -141,7 +305,7 @@
 	      	<div class="overlay"></div>
 	         <div class="container">
 	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/swa.jpg);">
+	          	<div class="one-third order-md-last img hero-img floating">
 	          	 <div class="overlay"></div>
 	          	</div>
 		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
@@ -160,37 +324,51 @@
 						// Create an array of typing text
 						const typingTexts = [
 						'Full Stack Developer  ',
-						
+						'Shopify Developer  ',
+						'WordPress Developer  '
 						];
 
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
+						let textIndex = 0;
+						let charIndex = 0;
+						let isDeleting = false;
+						let typeSpeed = 150;
 
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
+						function type() {
+							const currentText = typingTexts[textIndex];
+							if (isDeleting) {
+								typingAnimationElement.textContent = currentText.substring(0, charIndex - 1);
+								charIndex--;
+								typeSpeed = 100;
+							} else {
+								typingAnimationElement.textContent = currentText.substring(0, charIndex + 1);
+								charIndex++;
+								typeSpeed = 150;
+							}
+
+							if (!isDeleting && charIndex === currentText.length) {
+								isDeleting = true;
+								typeSpeed = 2000; // Pause at end
+							} else if (isDeleting && charIndex === 0) {
+								isDeleting = false;
+								textIndex = (textIndex + 1) % typingTexts.length;
+								typeSpeed = 500; // Pause before start
+							}
+
+							setTimeout(type, typeSpeed);
 						}
 
 						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
+						type();
 
 						</script>
 
 						<br>
 						<br>
-			            <h2>A Python Django Developer</h2>
+			            <h2>A Full Stack Developer</h2>
 						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
 						<!-- <br> -->
-			            <p><a href="https://www.linkedin.com/in/swalih-kp-8782b6201/" class="btn btn-primary py-3 px-4">LinkedIn</a> 
-							<a href="https://github.com/swalih2233" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+			            <p><a href="https://www.linkedin.com/in/swalih-kp-8782b6201/" target="_blank" class="btn btn-primary py-3 px-4">LinkedIn</a> 
+							<a href="#project-section" target="_blank" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
 		            </div>
 		          </div>
 	        	</div>
@@ -203,8 +381,7 @@
 
     <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
     	<div class="container">
-			<div class="row">
-				<div class="row d-flex align-items-stretch">
+			<div class="row d-flex align-items-stretch">
 				<!-- <div class="row d-flex"> -->
 					<div class="col-md-6 col-lg-5 d-flex">
 						<div class="img-about img d-flex align-items-stretch">
@@ -212,15 +389,15 @@
 								<div class="row">
 									<div class="col-sm-6 col-md-5">
 									  <div class="about-img">
-										<img src="images/sa.jpg" class="img-fluid rounded b-shadow-a" alt="">
+										<img src="images/Gemini_Generated_Image_ogv5wkogv5wkogv5.png" class="img-fluid rounded b-shadow-a" alt="">
 									  </div>
 									</div>
 									<!-- Details next to profile image -->
 									<div class="col-sm-6 col-md-7">
 									  <div class="about-info">
 										<p><span class="title-s">Name: </span> <span>Mohammed Swalih</span></p>
-										<p><span class="title-s">Job Role: </span> <span>Python Django Developer</span></p>
-										<p><span class="title-s">Experience: </span> <span>1 Years 3 Months</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Full Stack Developer</span></p>
+										<p><span class="title-s">Experience: </span> <span>4 Years</span></p>
 										<p><span class="title-s">Address: </span> <span>Malappuram, India</span></p>
 									  </div>
 									</div>
@@ -228,33 +405,51 @@
 
 								<div class="skill-mf">
 									<p class="title-s">Skills</p>
-									<span>HTML,CSS</span> <span class="pull-right">95%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>JAVASCRIPT</span> <span class="pull-right">80%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
 									<span>PYTHON</span> <span class="pull-right">95%</span>
 									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+										<div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="95" aria-valuemin="0"
 											aria-valuemax="100"></div>
 									</div>
-									
+
 									<span>DJANGO</span> <span class="pull-right">95%</span>
 									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+										<div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="95" aria-valuemin="0"
 											aria-valuemax="100"></div>
 									</div>
-									
+
+									<span>JAVASCRIPT</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
 									<span>POSTGRESQL</span> <span class="pull-right">90%</span>
 									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+										<div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>WORDPRESS</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>SHOPIFY</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>WIX</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>WEBFLOW</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="80" aria-valuemin="0"
 											aria-valuemax="100"></div>
 									</div>
 								</div>
@@ -269,13 +464,13 @@
 								<h1 class="big">About</h1>
 								<h2 class="mb-4">About Me</h2>
 								
-								<p>I am a Python Django developer with over 1+ year of experience in full-stack development. I specialize in completing projects on time, ensuring high-quality deliverables. My expertise lies in crafting efficient solutions using Python and Django frameworks.</p>
+								<p>Full Stack Developer with 4 years of experience building high-performance web applications and e-commerce solutions. Expert in Shopify and WordPress for custom storefronts, alongside robust backend development using Django. Proven track record of delivering end-to-end projects, from responsive UI design to complex database management. Passionate about writing clean, scalable code that drives business growth and enhances user experience.</p>
 								<ul class="about-info mt-4 px-md-0 px-2">
 									<li class="d-flex"><span>Profile:</span> <span>Python Django &amp; Full Stack Developer</span></li>
 									<li class="d-flex"><span>Domain:</span> <span>Web Development</span></li>
 									<li class="d-flex"><span>Education:</span> <span>Bachelor of Commerce</span></li>
 									<li class="d-flex"><span>Language:</span> <span>English, Tamil, Malayalam</span></li>
-									<li class="d-flex"><span>Other Skills:</span> <span>Git, Tailwindcss, Jquery, Bootstrap, SQL &amp; Django Rest Framework </span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>WordPress, Shopify, Wix, Git, Tailwindcss, Jquery, Bootstrap, SQL &amp; Django Rest Framework </span></li>
 									<li class="d-flex"><span>Interest:</span> <span>Traveling, Travel Photography</span></li>
 									
 								</ul>
@@ -286,12 +481,11 @@
 						<div class="counter-wrap ftco-animate d-flex mt-md-3">
 							<div class="text">
 								<p class="mb-4">
-									<span class="number" data-number="12">0</span> <span>+</span>
+									<span class="number" data-number="25">0</span> <span>+</span>
 									<span>&nbsp; Projects completed</span>
 								</p>
-								<p><a href="https://www.linkedin.com/in/swalih-kp-8782b6201/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+								<p><a href="https://www.linkedin.com/in/swalih-kp-8782b6201/" target="_blank" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
 							</div>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -307,10 +501,7 @@
           <div class="col-md-10 heading-section text-center ftco-animate">
           	<h1 class="big big-2">Resume</h1>
             <h2 class="mb-4">Resume</h2>
-            <p>Experienced Python Full Stack Developer proficient in Django and full-stack 
-				development. Proficient in front-end and back-end technologies, Collaborative 
-				team player with a proven track record of delivering high-quality solutions and 
-				seeking innovative projects</p>
+            <p>Experienced Python Full Stack Developer with 3+ years of expertise in Django and full-stack development. Proficient in modern front-end and back-end technologies. Collaborative team player with a proven track record of delivering high-quality solutions for complex projects.</p>
           </div>
         </div>
 
@@ -321,28 +512,37 @@
 		<br>
 		
 		<div class="row">
+			
+
 				<div class="col-md-6">
 					<div class="resume-wrap ftco-animate">
 						<span class="date">2024-Present</span>
-						<h2>Python Django Developer</h2>
-						<span class="position">Tegrand</span>
-						<p class="mt-4">Tegrand, is a leading software development company known for its innovative solutions and customer-centric approach. Our team of skilled developers delivers robust and scalable software products to drive business growth. 
+						<h2>Full Stack Developer</h2>
+						<span class="position">Mavendoer Singapore | Remote Full Stack Developer</span>
+						<p class="mt-4">Mavendoer is a Singapore-based agency delivering high-performance web and e-commerce solutions. I specialize in building scalable digital products using WordPress, Shopify, and Django.</p>
 							<ul>
-								<li>Contributed to the development of robust and scalable web applications using the Django framework.</li>
-								<li>Collaborated with senior developers to design and implement features for 
-									client-facing web applications, ensuring adherence to industry best practices 
-									and project requirements.</li>
-								<li>Proficient in full-stack development, backend development, Django Models, 
-									database migrations, user authentication, custom user models, permissions 
-									and access control, Django Admin, Git, GitHub, Django REST framework, and 
-									Python.</li>
+								<li>E-Commerce: Developing custom, high-converting stores on Shopify and WordPress.</li>
+								<li>Modern Frontend: Crafting responsive, interactive user interfaces with HTML, CSS, and JavaScript.</li>
+								<li>Django Websites: Developing secure, custom-built websites with powerful features and clean Python code.</li>
 							</ul>
 						</p>
 					</div>
-
 				</div>
 
-			
+					<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2023-24</span>
+						<h2>Python Django Developer</h2>
+						<span class="position">Tegrand Kuttippuram India</span>
+						<p class="mt-4">Tegrand, is a leading software development company known for its innovative solutions and customer-centric approach. 
+							<ul>
+								<li>Contributed to the development of robust and scalable web applications using the Django framework.</li>
+								<li>Collaborated with senior developers to design and implement features for client-facing web applications.</li>
+								<li>Proficient in full-stack development, backend development, Django Models, and REST framework.</li>
+							</ul>
+						</p>
+					</div>
+				</div>
 			</div>
 
 		<br>
@@ -374,7 +574,7 @@
 
     		<div class="row justify-content-center mt-5">
     			<div class="col-md-6 text-center ftco-animate">
-    				<p><a href="https://drive.google.com/file/d/1yBykvKXnOaboMULM0qX0WAVcv6JrLQmM/view?usp=drive_link" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    				<p><a href="https://drive.google.com/uc?export=download&id=1jUprh1NoFA26CXk5k47O1DHiNw9AkVfa" class="btn btn-primary py-4 px-5" download>Download CV</a></p>
     			</div>
     		</div>
     	</div>
@@ -386,44 +586,42 @@
       <div class="container">
         <div class="row justify-content-center mb-5 pb-5">
           <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">Projects</h2>
-            <p>Below are the sample projects on Html-css, Javascript Python & Django.</p>
+            <h1 class="big big-2">My Works</h1>
+            <h2 class="mb-4">My Works</h2>
+            <p>Below are sample projects featuring HTML/CSS, JavaScript, Python, Django, WordPress, and Shopify.</p>
           </div>
         </div>
         <div class="row d-flex">
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/Screenshot\ 2024-01-21\ 170158.png');">
+              <a href="#" target="_blank" class="block-20 zoom-effect project-hover" style="background-image: url('images/rentify-1.png'); --hover-img: url('images/rentify-2.png');">
               </a>
               <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="#">The frontend is developed using HTML, CSS, and JavaScript to create dynamic and responsive user interfaces</a></h3>
-                <!-- <p>Analyzed music store data using advanced SQL queires to identify gaps and increase the business growth.</p> -->
+                <span class="project-name">Rentify</span>
+                <h3 class="heading"><a href="#" target="_blank">Built a high-performance WordPress site for property rentals and management.
+Optimized for mobile responsiveness, speed, and seamless booking experience.</a></h3>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="" class="block-20 zoom-effect" style="background-image: url('images/Screenshot\ 2024-01-21\ 165722.png');">
+              <a href="https://myhomeofy.com/" target="_blank" class="block-20 zoom-effect project-hover" style="background-image: url('images/homeofy-1.png'); --hover-img: url('images/homeofy-2.png');">
               </a>
               <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="">The frontend is developed using HTML, CSS, and JavaScript to create dynamic and responsive user interfaces</a></h3>
-                <!-- <p>Performed exploratory data analysis on diwali sales data using Python to improve the customer experience.</p> -->
+                <span class="project-name">Homeofy</span>
+                <h3 class="heading"><a href="https://myhomeofy.com/" target="_blank">Designed and developed a custom Shopify website with a clean, modern UI.
+Focused on performance, responsiveness, and smooth user experience.</a></h3>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href="" class="block-20 zoom-effect" style="background-image: url('images/kk.png');">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://www.padmehumstudioindia.com/" target="_blank" class="block-20 zoom-effect project-hover" style="background-image: url('images/padmehum-1.png'); --hover-img: url('images/padmehum-2.png');">
               </a>
               <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="">Implemented Python Django framework for back
-					end development, including PostgreSQL database 
-					management.</a></h3>
-                <!-- <p>Designed a power bi dashboard for Madhav Store to track and analyze the online sales data acorss India.</p> -->
+                <span class="project-name">Padmehum Studio</span>
+                <h3 class="heading"><a href="https://www.padmehumstudioindia.com/" target="_blank">Designed and developed a custom Shopify website with a clean, modern UI.
+Focused on performance, responsiveness, and smooth user experience.</a></h3>
               </div>
             </div>
           </div>
@@ -432,51 +630,75 @@
 	<br>
 		<!-- added justify-content-center to center align the last two projects -->
 		<div class="row d-flex justify-content-center">  
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://mintcream-toad-816498.hostingersite.com/" target="_blank" class="block-20 zoom-effect project-hover" style="background-image: url('images/shelta-1.png'); --hover-img: url('images/shelta-2.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+                <span class="project-name">Shelta</span>
+                <h3 class="heading"><a href="https://mintcream-toad-816498.hostingersite.com/" target="_blank">Designed and developed a custom WordPress website with a modern, responsive layout.
+Optimized performance, usability, and cross-device compatibility.</a></h3>
+              </div>
+            </div>
+          </div>
 			<div class="col-md-4 d-flex ftco-animate">
 				<div class="blog-entry justify-content-end">
-				<a href="" class="block-20 zoom-effect" style="background-image: url('images/home.png');">
+				<a href="https://7s3azy-we.myshopify.com/" target="_blank" class="block-20 zoom-effect project-hover" style="background-image: url('images/whitehorse-1.png'); --hover-img: url('images/whitehorse-2.png');">
 				</a>
 				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="">Developed using HTML, CSS, and JavaScript to create dynamic and responsive user interfaces</a></h3>
-				  <!-- <p>Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p> -->
+                  <span class="project-name">Whitehorse</span>
+				  <h3 class="heading"><a href="https://7s3azy-we.myshopify.com/" target="_blank">Built a fully responsive Shopify store using custom sections and Liquid.
+Focused on clean UI, scalability, and fast performance.</a></h3>
 				</div>
 			  </div>
 			</div>
 			<div class="col-md-4 d-flex ftco-animate">
 				<div class="blog-entry justify-content-end">
-				<a href="" class="block-20 zoom-effect" style="background-image: url('images/class.png');">
+				<a href="https://mavendoer.com/" target="_blank" class="block-20 zoom-effect project-hover" style="background-image: url('images/mavendoer-1.png'); --hover-img: url('images/mavendoer-2.png');">
 				</a>
 				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="">Implemented CRUD operations to manage data 
-					effectively, enhancing user experience</a></h3>
-				  <!-- <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p> -->
+                  <span class="project-name">Mavendoer</span>
+				  <h3 class="heading"><a href="https://mavendoer.com/" target="_blank">Built a dynamic WordPress website using custom themes and plugins.
+Focused on clean UI, scalability, and fast load performance.</a></h3>
 				</div>
 			  </div>
 			</div>
 
 			<div class="col-md-4 d-flex ftco-animate">
 				<div class="blog-entry justify-content-end">
-				<a href="#" class="block-20 zoom-effect" style="background-image: url('images/screencapture-127-0-0-1-5500-index-html-2024-06-03-14_35_57.png');">
+				<a href="https://maveniragallery.com/" target="_blank" class="block-20 zoom-effect project-hover" style="background-image: url('images/mavenira-1.png'); --hover-img: url('images/mavenira-2.png');">
 				</a>
 				<div class="text mt-3 float-right d-block">
-	
-				  <h3 class="heading"><a href="#">The frontend is developed using HTML, CSS, and JavaScript to create dynamic and responsive user interfaces</a></h3>
+                  <span class="project-name">Mavenira Gallery</span>
+				  <h3 class="heading"><a href="https://maveniragallery.com/" target="_blank">Developed a responsive WordPress website with a user-friendly design.
+Ensured smooth navigation and performance optimization.</a></h3>
 				</div>
 			  </div>
 			</div>
 
-			<div class="col-md-4 d-flex ftco-animate">
+						<div class="col-md-4 d-flex ftco-animate">
 				<div class="blog-entry justify-content-end">
-				<a href="#" class="block-20 zoom-effect" style="background-image: url('images/Screenshot\ 2024-06-03\ 144525.png');">
+				<a href="https://viryabyurbi.com/" target="_blank" class="block-20 zoom-effect project-hover" style="background-image: url('images/urbi-1.png'); --hover-img: url('images/urbi-2.png');">
 				</a>
 				<div class="text mt-3 float-right d-block">
-	
-				  <h3 class="heading"><a href="#">The frontend is developed using HTML, CSS, and JavaScript to create dynamic and responsive user interfaces</a></h3>
+                  <span class="project-name">Virya by Urbi</span>
+				  <h3 class="heading"><a href="https://viryabyurbi.com/" target="_blank">Developed a custom Shopify website with a modern, responsive design.
+Optimized performance and user experience across all devices.</a></h3>
 				</div>
 			  </div>
 			</div>
+
+						<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="#" target="_blank" class="block-20 zoom-effect project-hover" style="background-image: url('images/Screenshot 2024-06-03 144525.png'); --hover-img: url('images/Screenshot 2024-06-03 144843.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+                  <span class="project-name">Python Project</span>
+				  <h3 class="heading"><a href="#" target="_blank">The frontend is developed using HTML, CSS, and JavaScript to create dynamic and responsive user interfaces</a></h3>
+				</div>
+			  </div>
+			</div>
+
 		 </div>
 	  </div>
     </section>
@@ -487,7 +709,7 @@
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18">
               <div class="text">
-                <strong class="number" data-number="10">0</strong>
+                <strong class="number" data-number="15">15+</strong>
                 <span>Achievements</span>
               </div>
             </div>
@@ -495,7 +717,7 @@
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18">
               <div class="text">
-                <strong class="number" data-number="12">0</strong>
+                <strong class="number" data-number="25">25+</strong>
                 <span>Projects</span>
               </div>
             </div>
@@ -511,7 +733,7 @@
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18">
               <div class="text">
-                <strong class="number" data-number="500">0</strong>
+                <strong class="number" data-number="500">500+</strong>
                 <span>Cups of coffee</span>
               </div>
             </div>
@@ -526,7 +748,7 @@
 						<h2>More projects on<span> Github  </span> </h2>
 						<div class="heading"> <h4> I love to solve problems &amp; uncover hidden data stories </h4>
 						<br>
-						<p><a href="https://github.com/swalih2233" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						<p><a href="https://github.com/swalih2233" target="_blank" class="btn btn-primary py-3 px-5">GitHub</a></p>
 						</div>
 					</div>
 				</div>
@@ -562,7 +784,7 @@
           			<span class="icon-phone2"></span>
           		</div>
           		<h3 class="mb-4">Contact Number</h3>
-	            <p><a href="tel://0101010101">+91 7012045477</a></p>
+	            <p><a href="tel://0101010101" target="_blank">+971 55 890 2531</a></p>
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -571,7 +793,7 @@
           			<span class="icon-paper-plane"></span>
           		</div>
           		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="mailto:swalihkpx@gmail.com">contact@.com</a></p>
+	            <p><a href="mailto:swalihkpx@gmail.com" target="_blank">swalihkpx@gmail.com</a></p>
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -580,7 +802,7 @@
           			<span class="icon-globe"></span>
           		</div>
           		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="#">resumelink</a></p>
+	            <p><a href="https://drive.google.com/uc?export=download&id=1jUprh1NoFA26CXk5k47O1DHiNw9AkVfa" class="btn btn-primary btn-outline-primary py-3 px-3" download>Download CV</a></p>
 	          </div>
           </div>
 
@@ -589,17 +811,17 @@
 			<br>
 			<div class="row justify-content-center">
 				<div class="col-md-7 ftco-animate text-center">
-					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/aDYzcy246YqEnQy29" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/aDYzcy246YqEnQy29" target="_blank" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
 				</div>
 			</div>
 				<br>
 					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
 					  <li class="ftco-animate normal-txt">Find me on  </li>
 					  <!-- <li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial"><span class="icon-youtube"></span></a></li> -->
-					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/swalih-kp-8782b6201/"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/swalih-kp-8782b6201/" target="_blank"><span class="icon-linkedin"></span></a></li>  
 					  <!-- <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-twitter"></span></a></li> -->
 					  <!-- <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-facebook"></span></a></li> -->
-				      <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+				      <li class="ftco-animate"><a href="https://www.instagram.com/swalih._.__?igsh=MW1jNmpsYTA3YnM3dw==" target="_blank"><span class="icon-instagram"></span></a></li>
 					</ul>
 				<br>
 		   </div>
@@ -641,6 +863,40 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
+
+  <script>
+	// Scroll Progress Bar
+	window.onscroll = function() {
+		let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+		let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+		let scrolled = (winScroll / height) * 100;
+		document.getElementById("scroll-progress").style.width = scrolled + "%";
+	};
+
+	// Add dynamic Reveal animation on scroll
+	window.addEventListener('scroll', reveal);
+	function reveal() {
+		var reveals = document.querySelectorAll('.ftco-animate');
+		for (var i = 0; i < reveals.length; i++) {
+			var windowHeight = window.innerHeight;
+			var revealTop = reveals[i].getBoundingClientRect().top;
+			var revealPoint = 150;
+			if (revealTop < windowHeight - revealPoint) {
+				reveals[i].classList.add('active');
+			}
+		}
+
+		// Progress Bar Animation
+		var progressBars = document.querySelectorAll('.progress-bar');
+		progressBars.forEach(function(bar) {
+			var barTop = bar.getBoundingClientRect().top;
+			if (barTop < windowHeight - 50) {
+				var percentage = bar.getAttribute('aria-valuenow');
+				bar.style.width = percentage + "%";
+			}
+		});
+	}
+  </script>
     
   </body>
 </html>
