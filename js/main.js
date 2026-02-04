@@ -269,9 +269,57 @@
     fixedContentPos: false
   });
 
+	// Mobile project image auto-change on scroll
+	var mobileProjectHover = function() {
+		var observer;
+		var intervals = new Map();
+		
+		var initObserver = function() {
+			if (window.innerWidth <= 768) {
+				if (observer) observer.disconnect();
+				
+				observer = new IntersectionObserver(function(entries) {
+					entries.forEach(function(entry) {
+						if (entry.isIntersecting) {
+							if (!intervals.has(entry.target)) {
+								// Start toggling every 2.5 seconds
+								$(entry.target).addClass('mobile-active');
+								var interval = setInterval(function() {
+									$(entry.target).toggleClass('mobile-active');
+								}, 2500);
+								intervals.set(entry.target, interval);
+							}
+						} else {
+							if (intervals.has(entry.target)) {
+								clearInterval(intervals.get(entry.target));
+								intervals.delete(entry.target);
+							}
+							$(entry.target).removeClass('mobile-active');
+						}
+					});
+				}, {
+					threshold: 0.5
+				});
 
+				$('.project-hover').each(function() {
+					observer.observe(this);
+				});
+			} else {
+				if (observer) {
+					observer.disconnect();
+					$('.project-hover').removeClass('mobile-active');
+					intervals.forEach(function(interval) {
+						clearInterval(interval);
+					});
+					intervals.clear();
+				}
+			}
+		};
 
-
+		initObserver();
+		$(window).resize(initObserver);
+	};
+	mobileProjectHover();
 
 })(jQuery);
 
