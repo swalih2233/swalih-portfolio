@@ -272,6 +272,55 @@ body {
     padding-right: 10px;
   }
 }
+.subheading {
+  background: rgba(255, 189, 57, 0.1);
+  padding: 5px 20px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffbd39;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 189, 57, 0.2);
+}
+
+.hero-img-container {
+  background: #e68d5c;
+  border-radius: 60px;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  height: 600px;
+  width: 100%;
+}
+
+.hero-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 60px;
+}
+
+@media (max-width: 767.98px) {
+  .hero-img-container {
+    height: 400px;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  .home-slider, .home-slider .slider-item, .home-slider .slider-item .slider-text {
+    height: auto !important;
+    padding: 60px 0;
+  }
+}
+
+.hero .text h2 {
+    font-size: 20px;
+    color: #888;
+    font-weight: 400;
+    line-height: 1.6;
+}
 
 </style>
 
@@ -300,15 +349,17 @@ body {
 	    </div>
 	  </nav>
 	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
+		  <div class="home-slider">
+	       <div class="slider-item">
 	      	<div class="overlay"></div>
 	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third order-md-last img hero-img floating">
-	          	 <div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+	          <div class="row d-flex flex-column flex-md-row-reverse no-gutters slider-text align-items-center justify-content-center">
+				  <div class="col-md-6 d-flex align-items-center justify-content-center ftco-animate">
+					<div class="hero-img-container floating">
+						<img src="images/Gemini_Generated_Image_yv38qbyv38qbyv38 (1).png" alt="Mohammed Swalih">
+					</div>
+				  </div>
+		          <div class="col-md-6 d-flex align-items-center ftco-animate">
 		          	<div class="text">
 		          		<span class="subheading">Hello!</span>
 			            <h1 class="mb-4 mt-3">I'm <span>Mohammed Swalih</span></h1>
@@ -364,11 +415,9 @@ body {
 
 						<br>
 						<br>
-			            <h2>A Full Stack Developer</h2>
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-						<!-- <br> -->
+			            <h2>A Full Stack Developer dedicated to building exceptional digital experiences.</h2>
 			            <p><a href="https://www.linkedin.com/in/swalih-kp-8782b6201/" target="_blank" class="btn btn-primary py-3 px-4">LinkedIn</a> 
-							<a href="#project-section" target="_blank" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+							<a href="#project-section" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
 		            </div>
 		          </div>
 	        	</div>
@@ -514,8 +563,8 @@ body {
 		<div class="row">
 			
 
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
+				<div class="col-md-6 d-flex">
+					<div class="resume-wrap ftco-animate w-100">
 						<span class="date">2024-Present</span>
 						<h2>Full Stack Developer</h2>
 						<span class="position">Mavendoer Singapore | Remote Full Stack Developer</span>
@@ -525,22 +574,20 @@ body {
 								<li>Modern Frontend: Crafting responsive, interactive user interfaces with HTML, CSS, and JavaScript.</li>
 								<li>Django Websites: Developing secure, custom-built websites with powerful features and clean Python code.</li>
 							</ul>
-						</p>
 					</div>
 				</div>
 
-					<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
+					<div class="col-md-6 d-flex">
+					<div class="resume-wrap ftco-animate w-100">
 						<span class="date">2023-24</span>
 						<h2>Python Django Developer</h2>
 						<span class="position">Tegrand Kuttippuram India</span>
-						<p class="mt-4">Tegrand, is a leading software development company known for its innovative solutions and customer-centric approach. 
+						<p class="mt-4">Tegrand, is a leading software development company known for its innovative solutions and customer-centric approach.</p> 
 							<ul>
 								<li>Contributed to the development of robust and scalable web applications using the Django framework.</li>
 								<li>Collaborated with senior developers to design and implement features for client-facing web applications.</li>
 								<li>Proficient in full-stack development, backend development, Django Models, and REST framework.</li>
 							</ul>
-						</p>
 					</div>
 				</div>
 			</div>
@@ -555,16 +602,16 @@ body {
 		<br>
 		
 			<div class="row">
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
+    			<div class="col-md-6 d-flex">
+    				<div class="resume-wrap ftco-animate w-100">
     					<span class="date">2020-2023</span>
     					<h2>Bachelor of Commerce</h2>
     					<span class="position">Calicut University</span>
     				</div>
     			</div>
 
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
+    			<div class="col-md-6 d-flex">
+    				<div class="resume-wrap ftco-animate w-100">
     					<span class="date">2018-2019</span>
     					<h2>Higher Secondary School</h2>
     					<span class="position">GHSS Public School</span>

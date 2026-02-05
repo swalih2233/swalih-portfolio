@@ -107,7 +107,7 @@
 	    }
 		});
 	};
-	carousel();
+	// carousel();
 
 	$('nav .dropdown').hover(function(){
 		var $this = $(this);
